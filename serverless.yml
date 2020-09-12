@@ -1,26 +1,39 @@
-service: football-predictor
+service: my-first-service
 
 # app and org for use with dashboard.serverless.com
-app: football-predictor
+app: my-first-app
 org: jorobowallace
+
+plugins:
+  - serverless-bundle
+  - serverless-offline
+
+custom:
+  bundle:
+    sourcemaps: true
+    caching: true
+    stats: false
+    linting: false
 
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: dev
+  region: us-west-2
+  environment:
+    footballPredictURL: https://football-prediction-api.p.rapidapi.com
+
 
 # outputs:
 #   custom-output: any-value-here
 
- stage: dev
- region: us-west-2
-
 # you can define service wide environment variables here
-#  environment:
-#    variable1: value1
+
+
 
 functions:
-  team-predictor:
-    handler: handler.predictor
+  team-bye:
+    handler: handler.byeWeek
     # events:
     #   - http:
     #       path: hello

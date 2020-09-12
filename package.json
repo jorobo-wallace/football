@@ -1,0 +1,30 @@
+{
+    "name": "football-predictor",
+    "version": "0.0.0",
+    "description": "A lambda to help predict football outcomes",
+    "main": "handler.js",
+    "scripts": {
+        "start": "echo \"run with serverless deploy\"",
+        "test": "serverless-bundle test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jorobo-wallace/football"
+    },
+    "bugs": {
+        "url": "https://github.com/jorobo-wallace/football/issues"
+    },
+    "author": "Joanna Wallace",
+    "license": "MIT",
+    "devDependencies": {
+        "serverless-offline": "^4.10.6"
+    },
+    "dependencies": {
+        "aws-sdk": "^2.519.0",
+        "axios": "^0.20.0",
+        "lambda-log": "^2.4.0",
+        "lodash": "^4.17.20",
+        "moment-timezone": "^0.5.31",
+        "serverless-bundle": "^1.9.1"
+    }
+}
